@@ -12,6 +12,7 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.ast_grep.setup({})
+			lspconfig.harper_ls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.ts_ls.setup({})
 			lspconfig.prettier.setup({})

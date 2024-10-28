@@ -25,7 +25,7 @@ local mark = require('harpoon.mark')
 local ui = require('harpoon.ui')
 vim.keymap.set('n', '<space>h', mark.add_file)
 vim.keymap.set('n', '<space>m', ui.toggle_quick_menu)
-vim.keymap.set('n', '<space>n', ui.nav_next)
+vim.keymap.set('n', '<M-m>', ui.nav_next)
 
 -- Terminal toggle
-vim.keymap.set('n', '<space>v', ':ToggleTerm size=20 direction=horizontal<CR>')
+vim.keymap.set('n', '<space>v', ':ToggleTerm size=76 direction=vertical<CR>')
