@@ -27,5 +27,19 @@ vim.keymap.set('n', '<space>h', mark.add_file)
 vim.keymap.set('n', '<space>m', ui.toggle_quick_menu)
 vim.keymap.set('n', '<M-m>', ui.nav_next)
 
+-- Lsp mappings
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
+
+
 -- Terminal toggle
-vim.keymap.set('n', '<space>v', ':ToggleTerm size=76 direction=vertical<CR>')
+local terminal = function()
+	vim.cmd('vert term')
+	vim.cmd('set nonumber')
+	vim.cmd('set norelativenumber')
+	vim.cmd('startinsert')
+	vim.cmd('wincmd r')
+	vim.api.nvim_set_hl(0, 'WinSeparator', { fg = 'gray', bg = 'none', bold = true })
+end
+
+vim.keymap.set('n', '<space>v',terminal)

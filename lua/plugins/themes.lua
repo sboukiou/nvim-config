@@ -6,4 +6,5 @@ return {
 		priority = 1000,
 		opts = {},
 	},
+	{ 'rebelot/kanagawa.nvim' }
 }
