@@ -8,8 +8,29 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.o.fillchars = 'vert:┃'
 
+vim.opt.cursorline = true
+vim.api.nvim_set_hl(0, 'CursorLine', {
+    underline = true,
+})
+vim.api.nvim_create_autocmd('InsertEnter', {
+    callback = function()
+        vim.opt.cursorline = false
+    end
+})
 
--- transparent background
+vim.diagnostic.config({
+    virtual_text = false,
+	underline = false
+})
+
+-- Enable when leaving insert mode
+vim.api.nvim_create_autocmd('InsertLeave', {
+    callback = function()
+        vim.opt.cursorline = true
+    end
+})
+
+-- Transparent background
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
