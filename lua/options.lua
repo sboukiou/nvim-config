@@ -1,6 +1,6 @@
 vim.opt.rnu = true
 vim.opt.nu = true
-vim.cmd.colorscheme 'kanagawa'
+vim.cmd.colorscheme 'habamax'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -10,7 +10,6 @@ vim.o.fillchars = 'vert:┃'
 
 vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', {
-    underline = true,
 })
 vim.api.nvim_create_autocmd('InsertEnter', {
     callback = function()
@@ -19,7 +18,7 @@ vim.api.nvim_create_autocmd('InsertEnter', {
 })
 
 vim.diagnostic.config({
-    virtual_text = false,
+    -- virtual_text = false,
 	underline = false
 })
 
@@ -37,4 +36,5 @@ vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
 
 vim.cmd("set guicursor=n-v-c-i:block")
+vim.cmd("set grepprg=rg\\ -H\\ --no-heading\\ --vimgrep")
 

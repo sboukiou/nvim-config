@@ -18,7 +18,8 @@ vim.keymap.set('n', '<space>th',builtin.colorscheme)
 
 -- Neotree
 local fuzzy = require('neo-tree')
-vim.keymap.set('n', '<space>gb', ':Neotree filesystem reveal current toggle<CR>')
+-- vim.keymap.set('n', '<space>gb', ':Ex<CR>')
+vim.keymap.set('n', '<space>gb', ':Neotree position=current toggle<CR>')
 
 -- Harpoon
 local mark = require('harpoon.mark')
