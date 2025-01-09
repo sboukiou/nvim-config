@@ -26,9 +26,11 @@ local mark = require('harpoon.mark')
 local ui = require('harpoon.ui')
 vim.keymap.set('n', '<space>h', mark.add_file)
 vim.keymap.set('n', '<space>m', ui.toggle_quick_menu)
-vim.keymap.set('n', '<M-m>', ui.nav_next)
+vim.keymap.set('n', '<A-n>', ui.nav_next)
 
 -- Lsp mappings
+vim.keymap.set('n', '<space>df', vim.lsp.buf.definition, {})
+vim.keymap.set('n', '<space>dc', vim.lsp.buf.declaration, {})
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
 
