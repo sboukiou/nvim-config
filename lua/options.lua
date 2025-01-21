@@ -1,6 +1,6 @@
 vim.opt.rnu = true
 vim.opt.nu = true
-vim.cmd.colorscheme 'habamax'
+vim.cmd.colorscheme 'rose-pine-moon'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -37,4 +37,5 @@ vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
 
 vim.cmd("set guicursor=n-v-c-i:block")
 vim.cmd("set grepprg=rg\\ -H\\ --no-heading\\ --vimgrep")
+vim.cmd([[highlight CursorLine ctermbg=236 guibg=#303030]])
 
