@@ -18,5 +18,13 @@ return {
 				-- Your config here
 			})
 		end,
-	}
+	},
+	{
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({
+				-- optional configuration here
+			})
+		end
+	},
 }

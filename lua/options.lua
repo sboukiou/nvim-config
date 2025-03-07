@@ -1,11 +1,11 @@
 vim.opt.rnu = true
 vim.opt.nu = true
-vim.cmd.colorscheme 'rose-pine-moon'
+vim.cmd.colorscheme 'habamax'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+-- vim.opt.expandtab = true
 vim.o.fillchars = 'vert:┃'
 
 vim.opt.cursorline = true

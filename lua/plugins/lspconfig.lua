@@ -1,7 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		opts = { ensure_installed = { "clangd", "pyright", "lua-language-serve" } },
+		opts = { ensure_installed = { "clangd", "lua-language-serve" } },
 		config = function()
 			require("mason").setup()
 		end,
@@ -10,8 +10,12 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
+			local hoverSetup = require("plugins.lsp-advanced.lsp-buf-hover")
+			hoverSetup.setUpLspHover()
+			-- local.
 			lspconfig.lua_ls.setup({})
 			lspconfig.clangd.setup({})
+
 		end,
 	},
 }
